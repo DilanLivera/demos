@@ -3,9 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13D2323E-4867-43DB-9755-F538D1F19A55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi", "src\WeatherApi\WeatherApi.csproj", "{3E3F029E-93FB-4724-BF47-78C347269C63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A35501AB-177B-4D91-950B-1C58B038132C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E3F029E-93FB-4724-BF47-78C347269C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3F029E-93FB-4724-BF47-78C347269C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3F029E-93FB-4724-BF47-78C347269C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3F029E-93FB-4724-BF47-78C347269C63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E3F029E-93FB-4724-BF47-78C347269C63} = {13D2323E-4867-43DB-9755-F538D1F19A55}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E457D52-4EE2-40CC-925D-3C83BBE25DE8}

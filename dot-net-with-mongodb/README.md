@@ -8,4 +8,4 @@ First download and install MongoDB locally. Link to [MongoDB Community Server](h
 
 ## Resources
 
-- [](https://www.mongodb.com/try/download/community)
+- [MongoDB Community Server](https://www.mongodb.com/try/download/community)
