@@ -1,21 +1,19 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 
 namespace Proxy.Api
 {
     public class Startup
     {
+        private const string ServiceName = "MyCompany.MyProduct.MyService";
+        private const string ServiceVersion = "1.0.0";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,6 +30,20 @@ namespace Proxy.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Proxy.Api", Version = "v1" });
             });
+
+            services.AddOpenTelemetryTracing(builder =>
+            {
+                builder
+                    .AddConsoleExporter()
+                    .AddSource(ServiceName)
+                    .SetResourceBuilder(ResourceBuilder
+                        .CreateDefault()
+                        .AddService(serviceName: ServiceName, serviceVersion: ServiceVersion))
+                    .AddHttpClientInstrumentation()
+                    .AddAspNetCoreInstrumentation();
+            });
+
+            services.AddHttpClient();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

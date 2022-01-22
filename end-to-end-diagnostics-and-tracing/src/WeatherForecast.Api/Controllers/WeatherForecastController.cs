@@ -1,6 +1,5 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -15,7 +14,7 @@ namespace WeatherForecast.Api.Controllers
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
-        [SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "<Pending>")]
+
         private readonly ILogger<WeatherForecastController> _logger;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
@@ -24,16 +23,20 @@ namespace WeatherForecast.Api.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public ActionResult<IReadOnlyList<WeatherForecast>> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = _summaries[rng.Next(_summaries.Length)]
-            })
-            .ToArray();
+            IReadOnlyList<WeatherForecast> weatherForecasts = Enumerable
+                .Range(1, 5)
+                .Select(index => new WeatherForecast
+                {
+                    Date = DateTime.Now.AddDays(index),
+                    TemperatureC = rng.Next(-20, 55),
+                    Summary = _summaries[rng.Next(_summaries.Length)]
+                })
+                .ToList();
+
+            return Ok(weatherForecasts);
         }
     }
 }
