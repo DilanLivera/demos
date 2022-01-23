@@ -11,7 +11,7 @@ namespace Proxy.Api
 {
     public class Startup
     {
-        private const string ServiceName = "MyCompany.MyProduct.MyService";
+        private const string ServiceName = "Demo.DiagnosticsAndTracing.Proxy";
         private const string ServiceVersion = "1.0.0";
 
         public Startup(IConfiguration configuration)
@@ -21,14 +21,19 @@ namespace Proxy.Api
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(options =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Proxy.Api", Version = "v1" });
+                options.SwaggerDoc(
+                    "v1",
+                    new OpenApiInfo
+                    {
+                        Title = "Proxy.Api",
+                        Version = "v1"
+                    });
             });
 
             services.AddOpenTelemetryTracing(builder =>
@@ -46,14 +51,15 @@ namespace Proxy.Api
             services.AddHttpClient();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Proxy.Api v1"));
+                app.UseSwaggerUI(options => options.SwaggerEndpoint(
+                    "/swagger/v1/swagger.json",
+                    "Proxy.Api v1"));
             }
 
             app.UseHttpsRedirection();
