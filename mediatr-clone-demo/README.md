@@ -6,4 +6,5 @@
 
 ## Resources
 
-- [MediatR](https://github.com/jbogard/MediatR)
+- [GitHub - MediatR](https://github.com/jbogard/MediatR)
+- [YouTube - How Assembly Scanning keeps your .NET code clean by Nick Chapsas](https://www.youtube.com/watch?v=_YkvFQ1-Lt0)
