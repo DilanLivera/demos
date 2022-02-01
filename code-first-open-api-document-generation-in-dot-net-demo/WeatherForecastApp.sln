@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D24FE05-B5C8-46D7-B552-FC4086F9B003}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FE0D5435-E62B-4779-91F0-DADFEAA32D9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Api", "src\WeatherForecast.Api\WeatherForecast.Api.csproj", "{12EE6B19-8668-4B81-89B7-44AA29749205}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12EE6B19-8668-4B81-89B7-44AA29749205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12EE6B19-8668-4B81-89B7-44AA29749205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12EE6B19-8668-4B81-89B7-44AA29749205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12EE6B19-8668-4B81-89B7-44AA29749205}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{12EE6B19-8668-4B81-89B7-44AA29749205} = {FE0D5435-E62B-4779-91F0-DADFEAA32D9F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80F8B900-ECFE-46F0-BA23-97CC58644D81}
+	EndGlobalSection
+EndGlobal
