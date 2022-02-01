@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{51C34C5B-58C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR", "src\MediatR\MediatR.csproj", "{7EB0347E-CDB1-4473-BA1E-F56260CA027E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecastApi", "src\WeatherForecastApi\WeatherForecastApi.csproj", "{58F65755-C21C-4290-B0ED-DA162EC4CAC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{7EB0347E-CDB1-4473-BA1E-F56260CA027E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EB0347E-CDB1-4473-BA1E-F56260CA027E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EB0347E-CDB1-4473-BA1E-F56260CA027E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58F65755-C21C-4290-B0ED-DA162EC4CAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58F65755-C21C-4290-B0ED-DA162EC4CAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58F65755-C21C-4290-B0ED-DA162EC4CAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58F65755-C21C-4290-B0ED-DA162EC4CAC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7EB0347E-CDB1-4473-BA1E-F56260CA027E} = {51C34C5B-58C2-4634-992B-0954BFE8D6F2}
+		{58F65755-C21C-4290-B0ED-DA162EC4CAC3} = {51C34C5B-58C2-4634-992B-0954BFE8D6F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {727D8885-481F-44FC-909F-D1ACCE51FB46}
