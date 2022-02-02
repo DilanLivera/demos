@@ -1,8 +1,8 @@
-# Code first OpenAPI document generation in .Net demo
+# Generating OpenAPI document with swashbuckle
 
 ## Description
 
-A demo application to showcase how to configure .Net Core API to generate a OpenAPI document by code.
+A demo application to showcase how to generate OpenAPI document with Swashbuckle in ASP.Net Core.
 
 ## Resources
 
