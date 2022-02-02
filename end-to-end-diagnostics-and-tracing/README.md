@@ -1,1 +1,1 @@
-end-to-end-diagnostics-and-tracing-demo
+# End to end diagnostics and tracing
