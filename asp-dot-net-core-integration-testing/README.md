@@ -23,10 +23,7 @@
 
 ## Resources
 
-[Microsoft Docs - Integration tests in ASP.NET Core](https://docs.microsoft.com/aspnet/core/test/integration-tests)
-
-[Microsoft Docs - Test ASP.NET Core MVC apps](https://docs.microsoft.com/dotnet/architecture/modern-web-apps-azure/test-asp-net-core-mvc-apps)
-
-[Microsoft Docs - WebApplicationFactory Class (Microsoft.AspNetCore.Mvc.Testing)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.testing.webapplicationfactory-1)
-
-[Sending and Receiving JSON using HttpClient with System.Net.Http.Json - Steve Gordon](https://www.stevejgordon.co.uk/sending-and-receiving-json-using-httpclient-with-system-net-http-json)
+- [Microsoft Docs - Integration tests in ASP.NET Core](https://docs.microsoft.com/aspnet/core/test/integration-tests)
+- [Microsoft Docs - Test ASP.NET Core MVC apps](https://docs.microsoft.com/dotnet/architecture/modern-web-apps-azure/test-asp-net-core-mvc-apps)
+- [Microsoft Docs - WebApplicationFactory Class (Microsoft.AspNetCore.Mvc.Testing)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.testing.webapplicationfactory-1)
+- [Sending and Receiving JSON using HttpClient with System.Net.Http.Json by Steve Gordon](https://www.stevejgordon.co.uk/sending-and-receiving-json-using-httpclient-with-system-net-http-json)
