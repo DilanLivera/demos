@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WeatherForecastApi.Models;
+using WeatherForecastApi.Repositories;
 using WeatherForecastApi.Services;
 
 namespace WeatherForecastApi.Controllers

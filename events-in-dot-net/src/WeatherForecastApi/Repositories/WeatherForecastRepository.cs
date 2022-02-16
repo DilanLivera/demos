@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Extensions.Logging;
 using WeatherForecastApi.Models;
 
-namespace WeatherForecastApi.Services
+namespace WeatherForecastApi.Repositories
 {
     public class WeatherForecastFetchedEventArgs : EventArgs
     {
@@ -50,24 +49,6 @@ namespace WeatherForecastApi.Services
             };
 
             WeatherForecastFetched(this, weatherForecastFetchedEventArgs);
-        }
-    }
-
-    public class MessageService
-    {
-        private readonly ILogger<MessageService> _logger;
-
-        public MessageService(ILogger<MessageService> logger)
-        {
-            _logger = logger;
-        }
-
-        public void OnWeatherForecastFetched(
-            object source, WeatherForecastFetchedEventArgs eventArgs)
-        {
-            _logger.LogInformation(
-                "MessageService: Sending message - Fetched {WeatherForecastsCount} weather forecasts.",
-                eventArgs.WeatherForecasts.Count);
         }
     }
 }
