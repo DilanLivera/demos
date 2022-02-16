@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using WeatherForecastApi.Repositories;
 
 namespace WeatherForecastApi.Services
@@ -12,12 +13,14 @@ namespace WeatherForecastApi.Services
             _logger = logger;
         }
 
-        public void OnWeatherForecastFetched(
+        public Task OnWeatherForecastFetched(
             object source, WeatherForecastFetchedEventArgs eventArgs)
         {
             _logger.LogInformation(
                 "MessageService: Sending message - Fetched {WeatherForecastsCount} weather forecasts.",
                 eventArgs.WeatherForecasts.Count);
+
+            return Task.CompletedTask;
         }
     }
 }
