@@ -17,10 +17,12 @@ public static class OnPaymentReceived
         HttpRequest request,
         ILogger logger)
     {
-        logger.LogInformation("Received a payment");
-
         var requestBody = await new StreamReader(request.Body).ReadToEndAsync();
-        dynamic data = JsonConvert.DeserializeObject(requestBody);
+        var order = JsonConvert.DeserializeObject<Order>(requestBody);
+
+        logger.LogInformation(
+            "Received a payment for {OrderId} order id with {ProductId} product id.",
+            order.Id, order.ProductId);
 
         return new OkObjectResult("Thank you for your purchase");
     }

@@ -1,7 +1,7 @@
 ﻿POST http://{{host}}/api/OnPaymentReceived
 Content-Type: application/json
 
-{}
+{ "Id": "{{$random.uuid}}", "Email":  "dilan@test.com", "ProductId":  "X101"}
 
 <> 2023-01-06T112122.200.txt
 
