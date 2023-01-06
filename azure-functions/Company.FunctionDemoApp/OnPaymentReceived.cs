@@ -13,21 +13,15 @@ public static class OnPaymentReceived
 {
     [FunctionName("OnPaymentReceived")]
     public static async Task<IActionResult> RunAsync(
-        [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]
+        [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)]
         HttpRequest request,
         ILogger logger)
     {
-        logger.LogInformation("C# HTTP trigger function processed a request.");
-
-        string name = request.Query["name"];
+        logger.LogInformation("Received a payment");
 
         var requestBody = await new StreamReader(request.Body).ReadToEndAsync();
         dynamic data = JsonConvert.DeserializeObject(requestBody);
-        name = name ?? data?.name;
 
-        return name != null
-            ? new OkObjectResult($"Hello, {name}")
-            : new BadRequestObjectResult(
-                "Please pass a name on the query string or in the request body");
+        return new OkObjectResult("Thank you for your purchase");
     }
 }
