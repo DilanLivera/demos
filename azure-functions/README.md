@@ -1,6 +1,7 @@
 # Azure Functions
 
 Course - [Azure Functions Fundamentals by Mark Heath](https://app.pluralsight.com/library/courses/azure-functions-fundamentals/)
+Documentation - [Introduction to Azure Functions](https://learn.microsoft.com/azure/azure-functions/functions-overview)
 
 ## Azure Functions Core Tools
 
