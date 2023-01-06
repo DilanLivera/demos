@@ -16,3 +16,10 @@ Use the [Azure Storage Emulator](https://learn.microsoft.com/azure/storage/commo
 _**Note:**_
 
 The Azure Storage Emulator is now deprecated. Microsoft recommends that you use the [Azurite emulator](https://learn.microsoft.com/azure/storage/common/storage-use-azurite) for local development with Azure Storage.
+
+## How to test locally
+
+- Start the function. 
+  - You can start the function using the IDE or 
+  - Use the `func start` command in a PowerShell window to start the function using the Azure Functions Core Tools.
+- You can call the function using a tool like Postman or Curl. You can also use the `OnPaymentReceived` HTTP request in the DemoApp project using Rider. 
