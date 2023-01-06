@@ -25,3 +25,11 @@ public static class OnPaymentReceived
         return new OkObjectResult("Thank you for your purchase");
     }
 }
+
+public class Order
+{
+    public string Id { get; init; } = "";
+    public string ProductId { get; init; } = "";
+    public string Email { get; init; } = "";
+    public decimal Price { get; init; }
+}
