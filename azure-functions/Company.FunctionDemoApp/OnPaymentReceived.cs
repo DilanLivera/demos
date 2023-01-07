@@ -15,6 +15,7 @@ public static class OnPaymentReceived
     public static async Task<IActionResult> RunAsync(
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)]
         HttpRequest request,
+        [Queue(queueName: "orders")] IAsyncCollector<Order> orderQueue,
         ILogger logger)
     {
         var requestBody = await new StreamReader(request.Body).ReadToEndAsync();
@@ -23,6 +24,8 @@ public static class OnPaymentReceived
         logger.LogInformation(
             "Received a payment for {OrderId} order id with {ProductId} product id.",
             order.Id, order.ProductId);
+
+        await orderQueue.AddAsync(order);
 
         return new OkObjectResult("Thank you for your purchase");
     }
