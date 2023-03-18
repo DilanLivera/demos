@@ -6,7 +6,7 @@ internal class ForecastCommand : Command
 {
     private readonly FakeWeatherService _weather;
 
-    internal ForecastCommand(FakeWeatherService weather)
+    public ForecastCommand(FakeWeatherService weather)
         : base(name: "forecast", description: "Get the forecast. Almost always wrong.")
     {
         _weather = weather ?? throw new ArgumentNullException(nameof(weather));

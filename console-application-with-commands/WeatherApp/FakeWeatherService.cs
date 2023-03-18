@@ -11,7 +11,7 @@ internal class FakeWeatherServiceSettings
 
 internal class FakeWeatherService
 {
-    internal FakeWeatherService(IOptions<FakeWeatherServiceSettings> settings)
+    public FakeWeatherService(IOptions<FakeWeatherServiceSettings> settings)
     {
         Settings = settings.Value ?? throw new ArgumentNullException(nameof(settings));
     }
