@@ -1,9 +1,13 @@
 using WeatherApp.Components;
+using WeatherApp.Components.Pages.WeatherForecasts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddWeatherForecasts(
+    builder.Configuration);
 
 var app = builder.Build();
 
