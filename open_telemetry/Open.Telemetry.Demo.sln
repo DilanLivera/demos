@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp", "WeatherApp\WeatherApp.csproj", "{CB690B18-CE74-4CB0-8DB6-B2D82C3DE23F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather.Forecasts.API", "Weather.Forecasts.API\Weather.Forecasts.API.csproj", "{66F26772-D162-49E0-A4ED-B883536D3543}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{CB690B18-CE74-4CB0-8DB6-B2D82C3DE23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB690B18-CE74-4CB0-8DB6-B2D82C3DE23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB690B18-CE74-4CB0-8DB6-B2D82C3DE23F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F26772-D162-49E0-A4ED-B883536D3543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F26772-D162-49E0-A4ED-B883536D3543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F26772-D162-49E0-A4ED-B883536D3543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F26772-D162-49E0-A4ED-B883536D3543}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
