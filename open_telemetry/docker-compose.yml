@@ -1,6 +1,7 @@
 ﻿services:
   weather_app:
     image: weather_app
+    container_name: weather_app
     build:
       context: .
       dockerfile: WeatherApp/Dockerfile
@@ -11,9 +12,23 @@
       - 8080:8080
     environment:
       - WeatherForecastClient__BaseAddress=http://weather_api:8080
+      - OpenTelemetry__TracingEndpoint=http://jaeger:4317
 
   weather_api:
     image: weather_api
+    container_name: weather_api
     build:
       context: .
       dockerfile: Weather.Forecasts.API/Dockerfile
+    ports:
+      - 7080:8080
+    environment:
+      - OpenTelemetry__TracingEndpoint=http://jaeger:4317
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: jaeger
+    ports:
+      - 16686:16686  # UI
+      - 14268:14268  # gRPC
+      - 4317:4317

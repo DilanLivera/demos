@@ -1,3 +1,4 @@
+using Common.OpenTelemetry;
 using WeatherApp.Components;
 using WeatherApp.Components.Pages.WeatherForecasts;
 
@@ -8,6 +9,10 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddWeatherForecasts(
     builder.Configuration);
+
+builder.Services.AddCustomOpenTelemetry(
+    builder.Configuration,
+    builder.Environment);
 
 var app = builder.Build();
 
