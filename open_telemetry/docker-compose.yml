@@ -1,0 +1,19 @@
+﻿services:
+  weather_app:
+    image: weather_app
+    build:
+      context: .
+      dockerfile: WeatherApp/Dockerfile
+    depends_on:
+      weather_api:
+        condition: service_started
+    ports:
+      - 8080:8080
+    environment:
+      - WeatherForecastClient__BaseAddress=http://weather_api:8080
+
+  weather_api:
+    image: weather_api
+    build:
+      context: .
+      dockerfile: Weather.Forecasts.API/Dockerfile
